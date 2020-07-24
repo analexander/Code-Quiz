@@ -9,5 +9,3 @@ startBtn.addEventListener("click", function(event) {
         firstQuestionCont.setAttribute("style", "visibility:visible");
     }
 });
-
-var 
