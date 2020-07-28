@@ -2,19 +2,29 @@
 var questions =
     [
       {
-        question: "Select 2",
-        choices: ["One", "Two", "Four"],
-        answer: 1
-      },
-      {
-        question: "Select Dog",
-        choices: ["Cat", "Monkey", "Dog", "lol"],
+        question: "Commonly used data types do NOT include:",
+        choices: ["Strings", "Booleans", "Alerts", "Numbers"],
         answer: 2
       },
       {
-        question: "2+2",
-        choices: ["4", "1", "17", "0"],
-        answer: 0
+        question: "The condition of an if/else statement is enclosed with:",
+        choices: ["Quotes", "Curly brackets", "Parenthesis", "Square brackets"],
+        answer: 2
+      },
+      {
+        question: "What is the HTML tag under which one can write the JavaScript code?",
+        choices: ["<javascript>", "<scripted>", "<script>", "<js>"],
+        answer: 2
+      },
+      {
+        question: "Which built-in method removes the last element from an array and returns that element?",
+        choices: ["last()", "get()", "pop()", "None of the above"],
+        answer: 2
+      },
+      {
+        question: "Arrays in Javascript can be used to store:",
+        choices: ["Numbers and strings", "Other arrays", "Booleans", "All of the above"],
+        answer: 3
       }
     ];
 
