@@ -90,3 +90,27 @@ function ShowQuestion(index)
     });
     }
 }
+
+function SubmitAnswer(Answer)
+{
+    Answer = parseInt(Answer);
+    
+    if(questions[currentQuestionIndex].answer === Answer)
+    {
+        SetFeedback("Correct!");
+        //console.log("CORRECT");
+        currentScore++;
+    }
+    else
+    {
+    	SetFeedback("Wrong!");
+      
+      questionTimeRemaining -= 10;
+      if(questionTimeRemaining <= 0) {
+          OutOfTime();
+      }
+      //console.log("INCORRECT");
+    }
+    currentQuestionIndex++;
+    ShowQuestion(currentQuestionIndex);
+}
