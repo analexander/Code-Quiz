@@ -176,3 +176,44 @@ function FeedbackTimerFunc()
         ClearFeedback();
     }
 }
+
+// button functions
+
+function OnClick_Start()
+{  
+    questionIdx = 0;
+  
+    document.getElementById("div_main").setAttribute("style", "display:none");
+    document.getElementById("div_question").setAttribute("style", "display:block");
+    
+    ShowQuestion(questionIdx);
+    StartTimer();
+}
+function OnClick_Highscores()
+{
+  document.getElementById("div_main").setAttribute("style", "display:none");
+  document.getElementById("div_question").setAttribute("style", "display:none");
+  document.getElementById("div_feedback").setAttribute("style", "display:none");
+  document.getElementById("div_submitScore").setAttribute("style", "display:none");
+  document.getElementById("div_highscoreTable").setAttribute("style", "display:block");
+}
+function OnClick_SubmitInitials() {
+    console.log("!!! - " + questionTimeRemaining);
+    var hs =
+    {
+        initials: document.getElementById("initials").value,
+        score: questionTimeRemaining
+    }
+    highscores.push(hs);
+    
+    var list = document.getElementById("hs_list");
+    var li = document.createElement('li');
+    li.innerHTML = hs.initials + " | Score: " + hs.score; 
+    list.appendChild(li);
+    OnClick_Highscores();
+}
+function OnClick_ClearHighscores()
+{
+    highscores = [];
+    document.getElementById("hs_list").innerHTML = "";
+}
