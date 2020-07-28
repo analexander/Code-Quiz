@@ -114,3 +114,44 @@ function SubmitAnswer(Answer)
     currentQuestionIndex++;
     ShowQuestion(currentQuestionIndex);
 }
+
+// quiz functions
+function StartTimer()
+{
+    questionTimeRemaining = defaultQuestionTime;
+    document.getElementById("time_remaining").innerHTML = questionTimeRemaining;
+    intervalTimer = setInterval(TimerFunc, 1000);
+}
+function TimerFunc()
+{
+    questionTimeRemaining--;
+    if(questionTimeRemaining <= 0) {
+        OutOfTime();
+    }
+    document.getElementById("time_remaining").innerHTML = questionTimeRemaining;
+}
+function OutOfTime()
+{
+  console.log("Out Of Time");
+  EndOfQuiz();
+}
+function EndOfQuiz()
+{  
+    currentQuestionIndex = 0;
+
+    clearInterval(intervalTimer);
+
+    if(questionTimeRemaining < 0) {
+        questionTimeRemaining = 0;
+    }
+
+  //var feedbackText = "The quiz is now over. You scored " + currentScore + "/" + questions.length;
+
+  document.getElementById("div_main").setAttribute("style", "display:none");
+  document.getElementById("div_question").setAttribute("style", "display:none");
+  document.getElementById("div_feedback").setAttribute("style", "display:block");
+  document.getElementById("div_submitScore").setAttribute("style", "display:block");
+  document.getElementById("div_highscoreTable").setAttribute("style", "display:none");
+    
+    
+}
