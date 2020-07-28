@@ -8,59 +8,47 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="start-container">
-        <h1>Code Quiz</h1>
-            <p>Answer the questions as fast and correctly as you can to get the high score! You will be penalized 10 seconds for incorrect answers.</p>
-
-            <button id = start>Start</button>
-            
-    </div>
-
-    <div class="question-1">
-        <h2>Commonly used data types do NOT include:</h2>
-        <button>Strings</button><br><br>
-        <button>Booleans</button><br><br>
-        <button id = correct>Alerts</button><br><br>
-        <button>Numbers</button>
-            
-    </div>
-
-    <div class="question-2">
-        <h2>Commonly used data types do NOT include:</h2>
-        <button>Strings</button><br><br>
-        <button>Booleans</button><br><br>
-        <button id = correct>Alerts</button><br><br>
-        <button>Numbers</button>
-            
-    </div>
-
-    <div class="question-3">
-        <h2>Commonly used data types do NOT include:</h2>
-        <button>Strings</button><br><br>
-        <button>Booleans</button><br><br>
-        <button id = correct>Alerts</button><br><br>
-        <button>Numbers</button>
-            
-    </div>
-
-    <div class="question-4">
-        <h2>Commonly used data types do NOT include:</h2>
-        <button>Strings</button><br><br>
-        <button>Booleans</button><br><br>
-        <button id = correct>Alerts</button><br><br>
-        <button>Numbers</button>
-            
-    </div>
-
-    <div class="question-5">
-        <h2>Commonly used data types do NOT include:</h2>
-        <button>Strings</button><br><br>
-        <button>Booleans</button><br><br>
-        <button id = correct>Alerts</button><br><br>
-        <button>Numbers</button>
-            
-    </div>
-
+    <div class="container-fluid">
+  <!-- Timer Section -->
+  <div class="header time">
+    <div class='headerLeft'>Time Remaining:</div><t/>
+    <div class='headerRight'><span id="time_remaining"></span></div>
+    <br/><br/>
+  </div>
+  <!-- Main Section -->
+  <div id="div_main" class = "section container mt-4">
+    <h1>Code Quiz</h1>
+    <p>Answer the questions as fast and correctly as you can to get the high score!</p>
+    <p>You will be penalized 10 seconds for incorrect answers.</p>
+    <button id="btn_start" class="btn-success btn-large btn">Start</button>
+    <button id="btn_highscores" class="btn-info btn-large btn">Highscores</button>
+  </div>
+  <!-- Question Section -->
+  <div id="div_question">
+    <h2 id="txt_question">Question</h2>
+    <div id="answer_option_container"></div>
+  </div>
+  <!-- Feeback Section -->
+  <div id="div_feedback">
+  <p id="p_feedback"></p>
+  </div>
+  <!-- Submit Score  -->
+  <div id="div_submitScore" class="form-group">
+    <label for="initial_input">Enter Your Initials</label>
+    <input class="form-control" id="initials" placeholder="A.A.">
+    <button type="button" id="submit_initials">Submit</button>
+  </div>
+    <!-- Highscore Table -->
+  <div id="div_highscoreTable" class="container" style="display: none;">
+    <h5>High Scores</h5>
+    <hr/>
+      <ul id="hs_list">
+      </ul>
+      <hr/>
+      <button id="btn_highscroes_back" class="btn btn-large btn-light">Back</button>
+      <button id="btn_highscores_clear" class="btn btn-large btn-danger">Clear Highscores</button>
+  </div>
+</div>
 <script src="./script.js"></script>
 </body>
 </html>
