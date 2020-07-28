@@ -13,7 +13,7 @@ var questions =
       },
       {
         question: "What is the HTML tag under which one can write the JavaScript code?",
-        choices: ["<javascript>", "<scripted>", "<script>", "<js>"],
+        choices: ["&lt;javascript&gt;", "&lt;scripted&gt;", "&lt;script&gt;", "&lt;js&gt;"],
         answer: 2
       },
       {
