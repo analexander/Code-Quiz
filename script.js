@@ -155,3 +155,24 @@ function EndOfQuiz()
     
     
 }
+
+// feedback functions
+function SetFeedback(string)
+{
+	p_feedback.innerHTML = string;
+	feedbackTime = 2;
+	feedbackTimer = setInterval(FeedbackTimerFunc, 1000);
+}
+function ClearFeedback()
+{
+	p_feedback.innerHTML = "";
+    clearInterval(feedbackTimer);
+}
+function FeedbackTimerFunc()
+{
+    feedbackTime--;
+    if(feedbackTime <= 0)
+    {
+        ClearFeedback();
+    }
+}
