@@ -18,7 +18,7 @@ var questions =
       },
       {
         question: "Which built-in method removes the last element from an array and returns that element?",
-        choices: ["last()", "get()", "pop()", "None of the above"],
+        choices: [".last()", ".get()", ".pop()", "None of the above"],
         answer: 2
       },
       {
