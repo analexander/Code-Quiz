@@ -6,7 +6,7 @@ When you click the start button, a timer count-down starts and the user is prese
 
 
 Screenshot of application:
-https://user-images.githubusercontent.com/62355035/88751108-8fcba980-d11c-11ea-85bd-9d89b47de2d9.png
+![Code-Quiz-Screenshot] (https://user-images.githubusercontent.com/62355035/88751108-8fcba980-d11c-11ea-85bd-9d89b47de2d9.png)
 
 Link to deployed application:
 https://analexander.github.io/Code-Quiz/
